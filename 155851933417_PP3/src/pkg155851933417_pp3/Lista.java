@@ -129,7 +129,7 @@ public class Lista {
         NodoLista anterior = null;
         Cola cola1 = new Cola();
         while (aux != null) {
-            if (aux.getElemento().getFechaNacimiento().isBefore(fecha)
+            if (aux.getElemento().getFechaNacimiento().isAfter(fecha)
                     || aux.getElemento().getFechaNacimiento().isEqual(fecha)) { //si la fecha es despues o igual 
                 cola1.encolar(aux.getElemento());                            //se le agrega a la cola
                 if (anterior != null) {                                      //y se elimina el elemento de la lista

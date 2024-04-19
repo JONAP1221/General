@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>TechShop</title>
+    </head>
+    <body>
+        <header th:replace="~{layout/plantilla :: header}"/>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>Precio</th>
+                        <th>Categoría</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="libro : ${libros}">
+                        <td th:text="${libro.titulo}"></td>
+                        <td th:text="${libro.autor}"></td>
+                        <td th:text="${libro.precio}"></td>
+                        <td th:text="${libro.categoria}"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        <footer th:replace="~{layout/plantilla :: footer}"/>      
+      
+    </body>
+</html>

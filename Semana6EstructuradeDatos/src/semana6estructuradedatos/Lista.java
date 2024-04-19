@@ -109,7 +109,27 @@ public class Lista {
 
     public Persona extrae(int id) {
         Persona p = null;
-
+        NodoLista aux = cabeza;
+        NodoLista anterior = null;
+        while (aux != null) {
+            if (aux.getDato().getId() == id) {
+                p = aux.getDato();
+                if (aux == cabeza) {
+                    cabeza = cabeza.getSiguiente();
+                    aux.setSiguiente(null);
+                    break;
+                }//final if
+                else {
+                    anterior.setSiguiente(aux.getSiguiente());
+                    aux.setSiguiente(null);
+                    break;
+                }//final else
+            }//final if
+            else {
+                anterior = aux;
+                aux = aux.getSiguiente();
+            }//final else
+        }//final while
         return p;
     }//final del metodo extrae
 

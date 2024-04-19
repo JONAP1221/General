@@ -28,6 +28,8 @@ public class Semana6EstructuradeDatos {
         System.out.println("\n\n");
         lista1.elimina(20);
         System.out.println(lista1.toString());
+        System.out.println("\n\n"+lista1.extrae(25));
+        System.out.println("\n\n"+lista1);
     }
     
 }
